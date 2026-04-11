@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #0f172a;
+    color: #ffffff;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #000;
+    position: relative;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #00f5a0;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #fff;
+    background: none;
+    border: none;
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav .active {
+    color: #00f5a0;
+}
+
+/* Hero */
+.support-hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.support-hero h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.support-hero p {
+    color: #cbd5e1;
+    font-size: 16px;
+}
+
+/* Container */
+.support-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 60px 8%;
+    flex-wrap: wrap;
+}
+
+/* Contact Info */
+.contact-info {
+    flex: 1;
+    min-width: 280px;
+}
+
+.contact-info h2 {
+    margin-bottom: 20px;
+    color: #00f5a0;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    color: #cbd5e1;
+}
+
+/* Form */
+.contact-form {
+    flex: 1;
+    min-width: 280px;
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    color: #00f5a0;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: #0f172a;
+    color: #fff;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    background: #00f5a0;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #00d18b;
+}
+
+/* Success Message */
+#formMessage {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background: #0b1120;
+    color: #fff;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 8%;
+}
+
+.footer-section {
+    flex: 1 1 200px;
+    margin: 10px;
+}
+
+.footer-section h4 {
+    margin-bottom: 15px;
+    color: #00f5a0;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #00f5a0;
+}
+
+.social-links a {
+    margin-right: 10px;
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #00f5a0;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 8%;
+    border-top: 1px solid rgba(0,245,160,0.2);
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 8%;
+    }
+
+    .menu-toggle {
+        display: block;
+        order: 2;
+    }
+
+    .logo {
+        order: 1;
+    }
+
+    nav {
+        order: 3;
+        position: absolute;
+        top: 60px;
+        right: 8%;
+        flex-direction: column;
+        background: #000;
+        width: 160px;
+        padding: 8px;
+        gap: 6px;
+        display: none;
+        border-radius: 10px;
+        z-index: 1000;
+        pointer-events: auto;
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    nav a {
+        margin: 0;
+        padding: 6px 8px;
+        font-size: 13px;
+    }
+
+    .support-container {
+        flex-direction: column;
+    }
+
+/* WhatsApp Floating Button */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+}
+
+.whatsapp-icon {
+    font-size: 28px;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .whatsapp-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 55px;
+        height: 55px;
+    }
+
+    .whatsapp-icon {
+        font-size: 24px;
+    }
+}

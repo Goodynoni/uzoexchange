@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>UzoExchange | About Us</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="about.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <style>
+        /* Navbar styles copied to match index.html behavior */
+        .nav-menu { display: flex; gap: 25px; }
+        .nav-link { color: #fff; text-decoration: none; position: relative; font-weight: 500; }
+        .nav-link.active, .nav-link:hover { color: #fff; }
+        .nav-link.active::after { content: ""; width: 100%; height: 2px; background: #ff4ecd; position: absolute; bottom: -6px; left: 0; }
+        .nav-actions { display: flex; align-items: center; gap: 10px; }
+        .btn { padding: 10px 20px; border-radius: 8px; border: none; cursor: pointer; font-size: 0.9rem; }
+        .btn.login { background: transparent; border: 1px solid #fff; color: #fff; }
+        .btn.register { background: linear-gradient(45deg, #6a5cff, #ff5c8a); color: #fff; }
+        .menu-toggle { display: none; font-size: 1.6rem; cursor: pointer; }
+
+        /* Animation helpers */
+        .fade-in {opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out;}
+        .fade-in.visible {opacity:1; transform: translateY(0);}        
+
+        @media(max-width:768px){
+            .nav-menu{ position: absolute; top: 70px; right: 8%; background: #000; flex-direction: column; width: 160px; padding: 8px; display: none; border-radius: 10px; gap: 6px; z-index: 1000; pointer-events: auto; }
+            .nav-menu.show{ display: flex; }
+            .nav-menu .nav-link{ margin: 0; padding: 6px 8px; font-size: 13px; }
+            .menu-toggle{ display: block; }
+        }
+        </style>
+</head>
+<body>
+
+<!-- ==================== NAVBAR ==================== -->
+<header class="navbar">
+        <div class="logo"><img src="Uzo logo.jpg.jpeg" alt="UzoExchange Logo"></div>
+
+        <nav id="nav-menu" class="nav-menu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="index(1).html" class="nav-link">Crypto</a>
+            <a href="index(2).html" class="nav-link active">Gift Cards</a>
+            <a href="index(3).html" class="nav-link">About</a>
+            <a href="index(4).html" class="nav-link">Support</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="btn login">Login</button>
+            <button class="btn register">Register</button>
+            <div class="menu-toggle" id="menu-toggle">☰</div>
+        </div>
+    </header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content fade-in">
+        <h1>About UzoExchange</h1>
+        <p>Your trusted platform for cryptocurrency and gift card trading.</p>
+    </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section class="about-section">
+    <div class="about-container">
+        <div class="about-text fade-in">
+            <h2>Who We Are</h2>
+            <p>
+                UzoExchange is a secure digital trading platform that allows users to buy and sell cryptocurrencies 
+                and trade gift cards at competitive market rates. We are committed to providing fast, secure, 
+                and reliable financial solutions for individuals and businesses.
+            </p>
+
+            <h2>Our Mission</h2>
+            <p>
+                To simplify digital asset trading by offering a seamless, secure, and user-friendly experience 
+                for cryptocurrency and gift card transactions.
+            </p>
+
+            <h2>Why Choose Us</h2>
+            <ul>
+                <li>✔ Secure & Encrypted Transactions</li>
+                <li>✔ Fast Payment Processing</li>
+                <li>✔ Competitive Market Rates</li>
+                <li>✔ 24/7 Customer Support</li>
+                <li>✔ Transparent & Reliable Service</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- STATS SECTION -->
+<section class="stats">
+    <div class="stat fade-in">
+        <h3>50K+</h3>
+        <p>Active Users</p>
+    </div>
+    <div class="stat fade-in">
+        <h3>₦2B+</h3>
+        <p>Transactions Processed</p>
+    </div>
+    <div class="stat fade-in">
+        <h3>100%</h3>
+        <p>Secure Platform</p>
+    </div>
+    <div class="stat fade-in">
+        <h3>24/7</h3>
+        <p>Customer Support</p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>About</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index(1).html">Crypto</a></li>
+                <li><a href="index(2).html">Gift Cards</a></li>
+                <li><a href="index(4).html">Support</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Support</h4>
+            <ul>
+                <li><a href="index(5).html">Help Center</a></li>
+                <li><a href="index(6).html">Contact Us</a></li>
+                <li><a href="index(7).html">FAQ</a></li>
+                <li><a href="index(8).html">Status</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Legal</h4>
+            <ul>
+                <li><a href="index(1.1).html">Privacy Policy</a></li>
+                <li><a href="index(1.2).html">Terms of Service</a></li>
+                <li><a href="index(1.3).html">Security</a></li>
+                <li><a href="index(1.4).html">Compliance</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+                <a href="https://www.instagram.com/uzoexchange?igsh=MWg5eHJyZWVyaTQ4MQ%3D%3D&utm_source=qr" title="Instagram">Instagram</a>
+                <a href="https://www.facebook.com/share/1CAwxtDhdA/?mibextid=wwXIfr" title="Facebook">Facebook</a>
+                <a href="https://www.linkedin.com/company/uzoexchange" title="LinkedIn">LinkedIn</a>
+                <a href="https://t.me/uzoexchange" title="Telegram">Telegram</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 UzoExchange. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script src="main1.js"></script>
+</body>
+</html>

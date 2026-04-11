@@ -1,0 +1,383 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1d1b3a, #2e1a57);
+    color: #fff;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.hamburger {
+    display: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+}
+
+.nav-links .active a {
+    border-bottom: 2px solid #ff4ecd;
+}
+
+.nav-buttons button {
+    margin-left: 10px;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #6a11cb, #ff4ecd);
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+/* HERO */
+.hero {
+    padding: 80px 8%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+    text-align: left;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    margin-bottom: 25px;
+    opacity: 0.8;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    border: 2px dashed rgba(255,78,205,0.3);
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* CRYPTO SECTION */
+.crypto-section {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.crypto-section h2 {
+    margin-bottom: 40px;
+}
+
+.crypto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.crypto-card {
+    background: rgba(255,255,255,0.08);
+    padding: 25px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.crypto-card:hover {
+    transform: translateY(-10px);
+}
+
+.coin-icon {
+    font-size: 48px;
+    color: #ff4ecd;
+    margin-bottom: 15px;
+}
+
+.coin-icon.text-icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px auto;
+    font-size: 28px;
+    font-weight: 700;
+    background: linear-gradient(135deg, rgba(255,78,205,0.2), rgba(255,78,205,0.1));
+    border: 2px solid rgba(255,78,205,0.5);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255,78,205,0.2);
+    letter-spacing: 0;
+}
+
+.crypto-card h3 {
+    margin-bottom: 20px;
+}
+
+.crypto-card p {
+    opacity: 0.8;
+    margin-bottom: 15px;
+}
+
+/* FEATURES */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    padding: 60px 8%;
+    background: rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.feature h3 {
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+footer {
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+    padding: 60px 8%;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.footer-section h4 {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #ff4ecd;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: rgba(255,255,255,0.7);
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #ff4ecd;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    display: inline-block;
+    padding: 8px 16px;
+    background: rgba(255,78,205,0.1);
+    border: 1px solid rgba(255,78,205,0.3);
+    border-radius: 20px;
+    color: #ff4ecd;
+    font-size: 13px;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: rgba(255,78,205,0.2);
+    border-color: #ff4ecd;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+    .hamburger {
+        display: block;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        width: 36px;
+        height: 28px;
+        padding: 0;
+        position: relative;
+    }
+
+    .hamburger span {
+        display: block;
+        height: 3px;
+        background: #fff;
+        margin: 5px 0;
+        border-radius: 3px;
+        transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+
+    .hamburger.open span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.open span:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.open span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .navbar {
+        align-items: center;
+        padding: 16px 6%;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 6px;
+        width: 160px;
+        position: absolute;
+        top: 70px;
+        right: 6%;
+        background: #000;
+        padding: 8px;
+        border-radius: 10px;
+        z-index: 1000;
+        pointer-events: auto;
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 6px 8px;
+        border-radius: 6px;
+        background: transparent;
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero {
+        padding: 30px 6%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-image {
+        min-height: 250px;
+        width: 100%;
+    }
+
+    .crypto-section {
+        padding: 30px 6%;
+    }
+
+    .crypto-section h2 {
+        margin-bottom: 20px;
+    }
+
+    footer {
+        padding: 40px 6%;
+    }
+
+    .footer-container {
+        gap: 25px;
+        margin-bottom: 20px;
+    }
+
+    .footer-section h4 {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .footer-section a {
+        font-size: 12px;
+    }
+
+    .social-links {
+        gap: 10px;
+    }
+
+    .social-links a {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}

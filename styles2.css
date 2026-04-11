@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1d1b3a, #2e1a57);
+    color: #fff;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #000;
+    position: relative;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+
+/* Navbar from index.html */
+.nav-menu {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    font-weight: 500;
+}
+
+.nav-link.active,
+.nav-link:hover {
+    color: #fff;
+}
+
+.nav-link.active::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #ff4ecd;
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.btn.login {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.btn.register {
+    background: linear-gradient(90deg, #6a11cb, #ff4ecd);
+    color: #fff;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+
+.btn-primary {
+    background: linear-gradient(90deg, #6a11cb, #ff4ecd);
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+/* HERO */
+.hero {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    margin-bottom: 25px;
+    opacity: 0.85;
+}
+
+/* GIFT GRID */
+.gift-section {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.gift-section h2 {
+    margin-bottom: 40px;
+}
+
+.gift-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.gift-card {
+    background: rgba(255,255,255,0.08);
+    padding: 25px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s ease;
+}
+
+.gift-card:hover {
+    transform: translateY(-10px);
+}
+
+.gift-card h3 {
+    margin-bottom: 10px;
+}
+
+.gift-card p {
+    opacity: 0.8;
+    margin-bottom: 15px;
+}
+
+/* FEATURES */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    padding: 60px 8%;
+    background: rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.feature h3 {
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+footer {
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 8%;
+}
+
+.footer-section {
+    flex: 1 1 200px;
+    margin: 10px;
+}
+
+.footer-section h4 {
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+}
+
+.social-links a {
+    margin-right: 10px;
+    color: #ddd;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 8%;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 70px;
+        right: 8%;
+        background: #000;
+        flex-direction: column;
+        width: 160px;
+        padding: 8px;
+        display: none;
+        border-radius: 10px;
+        gap: 6px;
+        z-index: 1000;
+        pointer-events: auto;
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    .nav-menu .nav-link {
+        margin: 0;
+        padding: 6px 8px;
+        font-size: 13px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
